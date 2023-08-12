@@ -1,0 +1,7 @@
+library(maps)
+library(usdata)
+state_borders <- map_data("state") %>% 
+mutate(state = state2abbr(region)) %>% 
+select(-subregion)
+head(state_borders)
+#chloropleth for PCP
